@@ -47,7 +47,8 @@ class NotifyHelper {
 
   Future onDidReceiveLocalNotification(
       int id, String? title, String? body, String? payload) async {
-    Get.dialog(const Text("Aha! You have a notification"),
+    Get.dialog(
+      const Text("Aha! You have a notification"),
     );
   }
 

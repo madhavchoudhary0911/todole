@@ -5,16 +5,15 @@ import 'package:todole/interface/theme.dart';
 class MyInputField extends StatelessWidget {
   final String title;
   final String hint;
-  final TextEditingController? controller;  
+  final TextEditingController? controller;
   final Widget? widget;
 
   const MyInputField({
-  
     Key? key,
     required this.title,
     required this.hint,
     this.controller,
-    this.widget, 
+    this.widget,
   }) : super(key: key);
 
   @override
@@ -43,7 +42,7 @@ class MyInputField extends StatelessWidget {
               children: [
                 Expanded(
                   child: TextFormField(
-                    readOnly: widget==null?false:true,
+                    readOnly: widget == null ? false : true,
                     autofocus: true,
                     cursorColor:
                         Get.isDarkMode ? Colors.blue[100] : Colors.blue[700],
@@ -67,7 +66,11 @@ class MyInputField extends StatelessWidget {
                     ),
                   ),
                 ),
-                widget == null?Container():Container(child: widget,)
+                widget == null
+                    ? Container()
+                    : Container(
+                        child: widget,
+                      )
               ],
             ),
           ),
