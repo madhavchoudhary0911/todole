@@ -1,3 +1,5 @@
+// ignore_for_file: unused_field
+
 import 'package:date_picker_timeline/date_picker_timeline.dart';
 import 'package:flutter/material.dart';
 import 'package:todole/features/notification.dart';
@@ -18,6 +20,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   DateTime _selectedDate = DateTime.now();
+  // ignore: prefer_typing_uninitialized_variables
   var notifyHelper;
   @override
   void initState() {
@@ -48,23 +51,22 @@ class _HomePageState extends State<HomePage> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Container(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  DateFormat.yMMMMd().format(DateTime.now()),
-                  style: subHeadingStyle,
-                ),
-                Text(
-                  "Today",
-                  style: headingStyle,
-                ),
-              ],
-            ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                DateFormat.yMMMMd().format(DateTime.now()),
+                style: subHeadingStyle,
+              ),
+              Text(
+                "Today",
+                style: headingStyle,
+              ),
+            ],
           ),
           MyButton(
-              label: "+ Add Task", onTap: () => Get.to(() => AddTaskPage())),
+              label: "+ Add Task",
+              onTap: () => Get.to(() => const AddTaskPage())),
         ],
       ),
     );
@@ -128,9 +130,12 @@ class _HomePageState extends State<HomePage> {
           color: Get.isDarkMode ? Colors.white : Colors.black,
         ),
       ),
-      actions: const [
-        Icon(Icons.search_rounded,),
-        SizedBox(
+      actions: [
+        Icon(
+          Icons.search_rounded,
+          color: Get.isDarkMode ? Colors.white : Colors.black,
+        ),
+        const SizedBox(
           width: 20,
         ),
       ],

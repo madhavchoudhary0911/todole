@@ -12,7 +12,7 @@ const Color darkGreyClr = Color(0xFF121212);
 
 class Themes {
   static final light = ThemeData(
-    backgroundColor: Colors.grey,
+    backgroundColor: Colors.white,
     primaryColor: Colors.blue,
     brightness: Brightness.light,
   );

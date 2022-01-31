@@ -23,7 +23,7 @@ class Helper {
             "title STRING, note TEXT, date STRING, "
             "startTime STRING, endTime STRING, "
             "remind INTEGER, repeat STRING, "
-            "color STRING, "
+            "priority INTEGER, "
             "isCompleted INTEGER)",
           );
         },
