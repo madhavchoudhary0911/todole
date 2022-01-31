@@ -6,7 +6,7 @@ class Helper {
   static final int _version = 1;
   static final String _tableName = 'tasks';
 
-  static Future<Database> initDB() async {
+  static Future initDB() async {
     if (_db != null) {
       return;
     }
